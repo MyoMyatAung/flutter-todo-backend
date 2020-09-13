@@ -14,7 +14,7 @@ exports.getAllTodos = (req,res) => {
 }
 
 exports.addTodo = (req, res) => {
-    const {title, date_time, priority} = req.body;
+    const {title, date_time, priority, createdAt} = req.body;
     console.log(req.body);
     const sqlCmd = 'INSERT INTO todos(title,date_time,priority) VALUES(?,?,?)';
     db_conn.promise().query(sqlCmd,[title,date_time,priority])

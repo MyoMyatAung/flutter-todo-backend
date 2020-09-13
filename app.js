@@ -13,6 +13,7 @@ app.get('/',(req,res)=>{
 });
 
 require('./routes/routes.todos')(app);
+require('./routes/routes.auth')(app);
 
 app.listen(3000,()=>{
     console.log(`Server is Running on PORT : ${3000}`);
